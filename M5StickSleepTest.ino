@@ -3,8 +3,8 @@
 /*
  * Stick休眠和电源状态的的例子(参考m5stack官方代码并增加了isCharging()函数)
  * setPowerBoostKeepOn(true) 可以开启IP5306芯片的boost状态，避免低电流(小于45mA)持续32秒电源芯片待机断电
- * isChargeFull() 读取IP6306的寄存器获取是否充满电的状态，经过测试仅在插入外接供电+电池达到设置电压后返回true
- * isCharging() 读取IP6306的寄存器获取是否正在充电的状态，经过测试仅在插入外接供电+电池还没达到设置电压后返回true
+ * isChargeFull() 读取IP5306的寄存器获取是否充满电的状态，经过测试仅在插入外接供电+电池达到设置电压后返回true
+ * isCharging() 读取IP5306的寄存器获取是否正在充电的状态，经过测试仅在插入外接供电+电池还没达到设置电压后返回true
  * a. isChargeFull() == true 的条件下 可以显示电池界面是“USB插入且充满状态”
  * b. isChargeFull() == false && isCharging() == true 的条件下 可以显示电池界面是“USB插入且正在充电的状态”
  * c. isChargeFull() == false && isCharging() == false 的条件下 可以显示电池界面是“USB未插入，正在用锂电池供电状态”
